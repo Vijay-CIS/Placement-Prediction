@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type=text/css href="/Styles/add_course.css">
+    <script src="/Script/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <title>add_course</title>
+  </head>
+
+  <body>
+    <h2 class="text">Add Course</h2>
+    <div class="forms">
+      <form onsubmit="addCourse()">
+        <label for="id" class="id">ID</label><br />
+        <input type="text" id="id" name="id" placeholder="Enter ID" /><br />
+
+        <label for="fname" class="code">Code:</label><br />
+        <input
+          type="text"
+          id="code"
+          name="fname"
+          placeholder="Enter Code"
+        /><br />
+        <label for="lname" class="title">Title:</label><br />
+        <input
+          type="text"
+          id="title"
+          name="lname"
+          placeholder="Enter Title"
+        /><br />
+        <label for="type" class="type">Type:</label><br />
+        <input
+          type="text"
+          id="type"
+          name="Type"
+          placeholder="Enter Type"
+        /><br /><br />
+
+        <input type="submit" value="Submit" class="submit" />
+        <a class="next" href="./course.html">Next</a>
+      </form>
+    </div>
+  </body>
+</html>

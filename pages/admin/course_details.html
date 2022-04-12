@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/course_details.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <title>Course_Details</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Course_Details</h2>
+    <div id="course_details"></div>
+
+    <table id="tb2">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Course_ID</th>
+          <th>Semester</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      $(document).ready(function () {
+        display_course_details();
+      });
+
+      $("#course_details").click(function () {
+        display_course_details();
+      });
+
+      function display_course_details() {
+        let url = "http://localhost:5000/api/course_details/";
+        $.getJSON(url, function (data) {
+          var course_details = data;
+          $("#tb2 tbody").empty();
+          for (var i in course_details) {
+            var course = course_details[i];
+            let b = `<button onclick="delete_course(${course.id})">Delete</button>`;
+            let a = `<tr><td>${course.id}</td> <td>${course.course_id}</td><td>${course.semester}</td><td>${b}</td></tr>`;
+            $("#tb2 tbody").append(a);
+          }
+        });
+      }
+      function delete_course(id) {
+        let url = "http://localhost:5000/api/course_details/" + id;
+
+        axios.delete(url).then(
+          (response) => {
+            alert("Deleted");
+            display_course_details();
+            console.log(response);
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+
+[
+    {
+        "id":1,"code":"CU201","semester_no":"1"
+    },
+    {
+        "id":2,"code":"CU204","Semester_no":"1"
+    },
+    {
+        "id":3,"code":"C203","Semester_no":"2"
+    },
+    {
+        "id":4,"code":"C104","Semester_no":"2"
+    },
+    {
+        "id":5,"code":"CU205","Semester_no":"3"
+    }
+]

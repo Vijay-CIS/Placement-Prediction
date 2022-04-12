@@ -1,0 +1,18 @@
+
+[
+    {
+        "id":1,"code":"CU201","title":"Programming Fundamentals","type":"T"
+    },
+    {
+        "id":2,"code":"CU204","title":"Core Java","type":"L"
+    },
+    {
+        "id":3,"code":"C203","title":"Design Pattern","type":"T"
+    },
+    {
+        "id":4,"code":"C104","title":"J Unit","type":"T"
+    },
+    {
+        "id":5,"code":"CU205","title":"Java Stream","type":"P"
+    }
+]
