@@ -15,7 +15,7 @@ function login() {
     window.location = "index.html";
     return false;
   } else {
-    window.alert("Invalid");
+    window.location = "/admin/dashboard/401.html";
     return false;
   }
 }
@@ -69,18 +69,18 @@ const search = () => {
 };
 
 function auth() {
-  // SE.authenticate({
-  //   success: () => {
-  //     console.log("success");
-  //     // window.location.href = "/pages/student/stackoverflow.html";
-  //   },
-  //   error: () => {
-  //     console.log("error");
-  //   },
-  //   scope: ["read_inbox"],
-  //   redirect_uri: "https://stackexchange.com/oauth/login_success",
-  //   networkUsers: true,
-  // });
+  SE.authenticate({
+    success: () => {
+      console.log("success");
+      // window.location.href = "/pages/student/stackoverflow.html";
+    },
+    error: () => {
+      console.log("error");
+    },
+    scope: ["read_inbox"],
+    redirect_uri: "https://stackexchange.com/oauth/login_success",
+    networkUsers: true,
+  });
 
   window.location.href =
     "https://stackoverflow.com/oauth/dialog?client_id=23251&scope=no_expiry&redirect_uri=http://127.0.0.1:5500/pages/student/student-panel.html";
