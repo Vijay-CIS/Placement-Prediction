@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-    <link rel="stylesheet" type="text/css" href="/Styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="/admin/styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +37,7 @@
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"></script> -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
     <script src="	https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/Script/script.js"></script>
+    <script src="/student/script/learn.js"></script>
     
 
     <title>Learning </title>
@@ -47,7 +47,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">Explore</a>
+        <a class="navbar-brand" href="./student-panel.html">Explore</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -120,7 +120,7 @@
               </ul>
             </div>
             <li class="nav-item d-flex">
-              <a class="nav-link" href="signin.html">Sign Out</a>
+              <a class="nav-link" href="/admin/pages/signin.html">Sign Out</a>
             </li>
          
         </div>
@@ -152,21 +152,25 @@
           </div>
         </div>
       </nav>
+      <div class="">
+      <div id="searchForm">
       <div class="form-inline d-flex m-2">
-        <input class="form-control mr-sm-2" id="input" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0 m-1" id="search" onkeyup="searchVideo()">Search</button>
+        <input class="form-control mr-sm-2" id="input" onkeyup="videoSearch()" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 m-1" id="search" onclick="videoSearch()">Search</button>
       </div>
+    </div>
 
          <div class="row">
              <div class="col-md-12">
                  <div class="" id="videos">
-
+             
                  </div>
              </div> 
         
          </div>
 
     </div>
+</div>
 
           <!-- Copyright -->
           <div
