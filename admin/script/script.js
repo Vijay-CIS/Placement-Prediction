@@ -12,7 +12,7 @@ function login() {
   var email = document.getElementById("email").value;
   var pass = document.getElementById("pass").value;
   if (email == "admin" && pass == "admin") {
-    window.location = "index.html";
+    window.location = "/admin/dashboard/index.html";
     return false;
   } else {
     window.location = "/admin/dashboard/401.html";
